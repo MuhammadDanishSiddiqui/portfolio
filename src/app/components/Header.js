@@ -1,71 +1,70 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { AlignRight, Menu, X } from "lucide-react";
+import { menus } from "../constants/header";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md py-4 px-6">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/">
-          <span className="text-xl font-bold text-gray-800">M.Danish</span>
-        </Link>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-700 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        {/* Navigation Menu */}
-        <nav
-          className={`md:flex space-x-6 ${
-            isOpen ? "block" : "hidden"
-          } md:block absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0`}
-        >
-          <ul className="flex flex-col md:flex-row md:space-x-6">
-            <li className="text-center">
-              <Link href="#home" className="text-gray-700 hover:text-blue-600">
-                Home
-              </Link>
-            </li>
-            <li className="text-center">
-              <Link href="#about" className="text-gray-700 hover:text-blue-600">
-                About
-              </Link>
-            </li>
-            <li className="text-center">
+    <>
+      <header className="bg-white py-4 px-2 shadow">
+        <div className="container mx-auto flex justify-between items-center">
+          <div>
+            <h1 className="text-2xl font-bold cursor-pointer">Danish</h1>
+          </div>
+          <div>
+            <div className="hidden md:block">
+              {menus?.map(({ item, link }, index) => {
+                return (
+                  <Link
+                    key={index}
+                    href={link}
+                    className="pl-2 text-md text-gray-500 hover:text-black"
+                  >
+                    {item}
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="block md:hidden">
+              <AlignRight size={30} onClick={() => setIsOpen(!isOpen)} />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        className={`bg-black fixed top-0 w-full min-h-screen  py-4 px-2 ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold cursor-pointer text-white">
+            Danish
+          </h1>
+          <div>
+            <X
+              size={30}
+              className="text-white cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </div>
+        </div>
+        <div className="flex flex-col items-center mt-4">
+          {menus?.map(({ item, link }, index) => {
+            return (
               <Link
-                href="#skills"
-                className="text-gray-700 hover:text-blue-600"
+                key={index}
+                href={link}
+                className="py-2 text-md text-white cursor-pointer hover:text-black"
               >
-                Skills
+                {item}
               </Link>
-            </li>
-            <li className="text-center">
-              <Link
-                href="#resume"
-                className="text-gray-700 hover:text-blue-600"
-              >
-                Resume
-              </Link>
-            </li>
-            <li className="text-center">
-              <Link
-                href="#contact"
-                className="text-gray-700 hover:text-blue-600"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
+            );
+          })}
+        </div>
       </div>
-    </header>
+    </>
   );
 }
