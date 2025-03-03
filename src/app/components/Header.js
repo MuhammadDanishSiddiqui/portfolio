@@ -12,7 +12,7 @@ export default function Header() {
       <header className="bg-white py-4 px-2 shadow">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold cursor-pointer">Danish</h1>
+            <h1 className="text-2xl font-bold cursor-pointer">M. DANISH</h1>
           </div>
           <div>
             <div className="hidden md:block">
@@ -21,7 +21,7 @@ export default function Header() {
                   <Link
                     key={index}
                     href={link}
-                    className="pl-2 text-md text-gray-500 hover:text-black"
+                    className="pl-5 text-md text-gray-500 hover:text-black hover:underline"
                   >
                     {item}
                   </Link>
