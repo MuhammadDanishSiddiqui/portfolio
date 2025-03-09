@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white py-4 px-2 shadow">
+      <header className="bg-white py-4 px-2 shadow fixed w-full">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-bold cursor-pointer">M. DANISH</h1>
@@ -65,6 +65,7 @@ export default function Header() {
           })}
         </div>
       </div>
+      <div className="h-[64px]" />
     </>
   );
 }
