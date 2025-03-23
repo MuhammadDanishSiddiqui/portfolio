@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white py-4 px-2 shadow fixed w-full">
+      <header className="bg-white py-4 px-2 shadow fixed w-full z-10">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <h1 className="text-2xl font-bold cursor-pointer">M. DANISH</h1>
@@ -35,7 +35,7 @@ export default function Header() {
         </div>
       </header>
       <div
-        className={`bg-black fixed top-0 w-full min-h-screen  py-4 px-2 ${
+        className={`z-10 bg-black fixed top-0 w-full min-h-screen  py-4 px-2 ${
           isOpen ? "block" : "hidden"
         }`}
       >
