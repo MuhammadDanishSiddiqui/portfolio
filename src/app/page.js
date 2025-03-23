@@ -3,10 +3,18 @@ import profileImage from "../assets/images/avatr.jpg";
 import {
   ArrowDown,
   Award,
+  BookOpen,
+  Briefcase,
+  Building,
   CircleCheck,
+  Code,
+  Database,
+  GraduationCap,
   Headset,
   Mouse,
+  Server,
   StickyNote,
+  Wrench,
 } from "lucide-react";
 
 export default function HeroSection() {
@@ -90,6 +98,157 @@ export default function HeroSection() {
                       <StickyNote size={20} className="ml-2" />
                     </button>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="skills"
+          className="py-8 lg:py-0 min-h-[calc(100vh-64px)] bg-gray-100"
+        >
+          <div className="container mx-auto px-4 flex flex-col items-center justify-center min-h-[calc(100vh-64px)] text-center">
+            <div>
+              <h2 className="text-3xl font-bold text-black">Skills</h2>
+              <p className="text-gray-600 text-sm">
+                Technologies & Tools I Work With
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 mt-6">
+              <div className="bg-white p-4 rounded-md shadow-md w-80">
+                <Code size={32} className="text-blue-500 mx-auto" />
+                <h3 className="text-md font-semibold mt-2">Frontend</h3>
+                <p className="text-sm text-gray-600">
+                  React Native, React.js, Next.js, Tailwind CSS, Redux, HTML5,
+                  CSS3, JavaScript (ES6+), TypeScript
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-md shadow-md w-80">
+                <Database size={32} className="text-green-500 mx-auto" />
+                <h3 className="text-md font-semibold mt-2">Backend</h3>
+                <p className="text-sm text-gray-600">
+                  Firebase, Node.js, Express.js, Supabase, MongoDB, MySQL,
+                  Strapi
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-md shadow-md w-80">
+                <Wrench size={32} className="text-yellow-500 mx-auto" />
+                <h3 className="text-md font-semibold mt-2">Tools & DevOps</h3>
+                <p className="text-sm text-gray-600">
+                  Git, GitHub, Postman, VS Code, Vercel
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-md shadow-md w-80">
+                <Code size={32} className="text-red-500 mx-auto" />
+                <h3 className="text-md font-semibold mt-2">Other Skills</h3>
+                <p className="text-sm text-gray-600">
+                  REST APIs, GraphQL, Authentication
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="resume"
+          className="py-8 lg:py-0 min-h-[calc(100vh-64px)] bg-gray-100"
+        >
+          <div className="container mx-auto px-4 flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-black">Resume</h2>
+              <p className="text-gray-600 text-sm">My Education & Experience</p>
+            </div>
+            <div className="flex flex-wrap justify-center w-full mt-8">
+              <div className="w-full lg:w-[50%] p-4 flex flex-col">
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <GraduationCap className="mr-2" />
+                  Education
+                </h3>
+                <div className="bg-white p-6 rounded-md shadow-md flex-1">
+                  <ul className="list-none space-y-4">
+                    <li className="flex items-start">
+                      <BookOpen className="mr-3 mt-1 text-blue-500" size={20} />
+                      <div>
+                        <h4 className="text-md font-semibold">
+                          BS in Software Engineering
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Karachi University
+                        </p>
+                        <p className="text-xs text-gray-500">2016 - 2020</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <BookOpen
+                        className="mr-3 mt-1 text-green-500"
+                        size={20}
+                      />
+                      <div>
+                        <h4 className="text-md font-semibold">
+                          Intermediate in Computer Science
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Adamjee Government Science College
+                        </p>
+                        <p className="text-xs text-gray-500">2014 - 2016</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <BookOpen
+                        className="mr-3 mt-1 text-yellow-500"
+                        size={20}
+                      />
+                      <div>
+                        <h4 className="text-md font-semibold">
+                          Matriculation in Science
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          High Start Public Secondary School
+                        </p>
+                        <p className="text-xs text-gray-500">2008 - 2014</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="w-full lg:w-[50%] p-4 flex flex-col">
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <Briefcase className="mr-2" />
+                  Work Experience
+                </h3>
+                <div className="bg-white p-6 rounded-md shadow-md flex-1">
+                  <ul className="list-none space-y-4">
+                    <li className="flex items-start">
+                      <Building className="mr-3 mt-1 text-red-500" size={20} />
+                      <div>
+                        <h4 className="text-md font-semibold">
+                          Embroidery Digitizer
+                        </h4>
+                        <p className="text-sm text-gray-600">Digit EMB</p>
+                        <p className="text-xs text-gray-500">2019</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Code className="mr-3 mt-1 text-purple-500" size={20} />
+                      <div>
+                        <h4 className="text-md font-semibold">
+                          Jr. MERN Stack Developer
+                        </h4>
+                        <p className="text-sm text-gray-600">Concept Recall</p>
+                        <p className="text-xs text-gray-500">2020 - 2021</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Server className="mr-3 mt-1 text-blue-500" size={20} />
+                      <div>
+                        <h4 className="text-md font-semibold">
+                          MERN Stack Developer
+                        </h4>
+                        <p className="text-sm text-gray-600">Inapp Solutions</p>
+                        <p className="text-xs text-gray-500">2021 - Present</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

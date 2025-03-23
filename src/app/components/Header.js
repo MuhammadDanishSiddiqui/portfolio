@@ -41,7 +41,7 @@ export default function Header() {
       >
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold cursor-pointer text-white">
-            Danish
+            M. DANISH
           </h1>
           <div>
             <X
