@@ -157,7 +157,16 @@ export default function HeroSection() {
               <h2 className="text-3xl font-bold text-black">Resume</h2>
               <p className="text-gray-600 text-sm">My Education & Experience</p>
             </div>
-            <div className="flex flex-wrap justify-center w-full mt-8">
+
+            {/* Download Resume Button */}
+            <div className="my-4">
+              <button className="flex items-center bg-black text-white px-6 py-2 rounded-md font-semibold shadow-md hover:bg-gray-800 text-sm cursor-pointer">
+                Download Resume
+                <StickyNote size={20} className="ml-2" />
+              </button>
+            </div>
+
+            <div className="flex flex-wrap justify-center w-full">
               <div className="w-full lg:w-[50%] p-4 flex flex-col">
                 <h3 className="text-xl font-semibold mb-4 flex items-center">
                   <GraduationCap className="mr-2" />
