@@ -200,8 +200,8 @@ export default function HeroSection() {
                 <Code size={32} className="text-blue-500 mx-auto" />
                 <h3 className="text-md font-semibold mt-2">Frontend</h3>
                 <p className="text-sm text-gray-600">
-                  React Native, React.js, Next.js, Tailwind CSS, Redux, HTML5,
-                  CSS3, JavaScript (ES6+), TypeScript
+                  HTML5, CSS3, JavaScript (ES6+), TypeScript, React Native,
+                  React.js, Next.js, Tailwind CSS, Redux
                 </p>
               </div>
 
@@ -213,7 +213,7 @@ export default function HeroSection() {
                 <Database size={32} className="text-green-500 mx-auto" />
                 <h3 className="text-md font-semibold mt-2">Backend</h3>
                 <p className="text-sm text-gray-600">
-                  Firebase, Node.js, Express.js, Supabase, MongoDB, MySQL,
+                  Node.js, Express.js, MongoDB, MySQL, Firebase, Supabase,
                   Strapi
                 </p>
               </div>
